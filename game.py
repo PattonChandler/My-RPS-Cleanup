@@ -6,44 +6,48 @@
 # so we aren't able to forget to update all the places
 from random import choice
 valid_choices = ["rock", "paper", "scissors"]
-#
-# USER SELECTION
-#
 
-u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
-print("USER CHOICE:", u)
-if u not in valid_choices:
-    print("OOPS, TRY AGAIN")
-    exit()
+def winner(user_choice, computer_choice):
+    return "OOPS - TODO"
 
-#
-# COMPUTER SELECTION
-#
+if __name__ == "__main__":
+    # USER SELECTION
+    #
 
-c = choice(valid_choices)
-print("COMPUTER CHOICE:", c)
+    u = input("Please choose one of 'Rock', 'Paper', or 'Scissors': ").lower()
+    print("USER CHOICE:", u)
+    if u not in valid_choices:
+        print("OOPS, TRY AGAIN")
+        exit()
 
-#
-# DETERMINATION OF WINNER
-#
+    #
+    # COMPUTER SELECTION
+    #
 
-if u == "rock" and c == "rock":
-    print("It's a tie!")
-elif u == "rock" and c == "paper":
-    print("The computer wins")
-elif u == "rock" and c == "scissors":
-    print("The user wins")
+    c = choice(valid_choices)
+    print("COMPUTER CHOICE:", c)
 
-elif u == "paper" and c == "rock":
-    print("The computer wins")
-elif u == "paper" and c == "paper":
-    print("It's a tie!")
-elif u == "paper" and c == "scissors":
-    print("The user wins")
+    #
+    # DETERMINATION OF WINNER
+    #
 
-elif u == "scissors" and c == "rock":
-    print("The computer wins")
-elif u == "scissors" and c == "paper":
-    print("The user wins")
-elif u == "scissors" and c == "scissors":
-    print("It's a tie!")
+    if u == "rock" and c == "rock":
+        print("It's a tie!")
+    elif u == "rock" and c == "paper":
+        print("The computer wins")
+    elif u == "rock" and c == "scissors":
+        print("The user wins")
+
+    elif u == "paper" and c == "rock":
+        print("The computer wins")
+    elif u == "paper" and c == "paper":
+        print("It's a tie!")
+    elif u == "paper" and c == "scissors":
+        print("The user wins")
+
+    elif u == "scissors" and c == "rock":
+        print("The computer wins")
+    elif u == "scissors" and c == "paper":
+        print("The user wins")
+    elif u == "scissors" and c == "scissors":
+        print("It's a tie!")
